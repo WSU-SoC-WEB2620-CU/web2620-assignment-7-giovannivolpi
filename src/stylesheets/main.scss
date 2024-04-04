@@ -1,3 +1,59 @@
 // Your styles go here
 
-@import "~@fortawesome/fontawesome-free/css/all.css";
+$background-color: maroon;
+$box-color: grey;
+$text-color: white;
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+html{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+nav {
+    display: flex;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li {
+    margin-left: 1rem;
+    list-style-type: none;
+}
+
+nav a {
+    color: $text-color;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.top-box{
+    background: $background-color;
+    color: $text-color;
+    padding: 140px;
+    text-align: center;
+}
+
+.container1{
+    display: flex;
+    padding: 50px;
+    
+}
+
+.Box1, .Box2, .Box3{
+    background-color: $box-color;
+    margin: 5px;
+    padding: 100px;
+}
+
+
+
