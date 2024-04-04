@@ -3,6 +3,7 @@
 $background-color: maroon;
 $box-color: grey;
 $text-color: white;
+$body-color: lightgrey;
 
 @import "@fortawesome/fontawesome-free/css/all.css";
 
@@ -12,8 +13,13 @@ html{
     font-size: 16px;
 }
 
+body{
+    background: $body-color;
+}
+
 nav {
     display: flex;
+    background: $background-color;
 }
 
 nav > ul {
@@ -29,7 +35,6 @@ nav a {
     color: $text-color;
     text-decoration: none;
     padding: 10px;
-    background-color: #333;
 }
 
 nav a:hover {
@@ -55,5 +60,32 @@ nav a:hover {
     padding: 100px;
 }
 
+.container2{
+    text-align: center;
+    padding: 120px;
+}
+
+.container3{
+    display: flex;
+    padding: 50px;
+}
+
+.box4, .box5{
+    background-color: $box-color;
+    margin: 10px;
+    padding: 10px;
+}
+
+.container4{
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14, .box15{
+    background-color: $box-color;
+    margin: 10px;
+    padding: 10px;
+}
 
 
