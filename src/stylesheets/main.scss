@@ -4,6 +4,7 @@ $background-color: maroon;
 $box-color: grey;
 $text-color: white;
 $body-color: lightgrey;
+$hover-color: #555;
 
 @import "@fortawesome/fontawesome-free/css/all.css";
 
@@ -38,8 +39,10 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: $hover-color;
 }
+
+
 
 .top-box{
     background: $background-color;
@@ -80,6 +83,10 @@ nav a:hover {
     display: flex;
     padding: 50px;
     flex-direction: column;
+}
+
+img{
+    width: 1000px;
 }
 
 .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14, .box15{
