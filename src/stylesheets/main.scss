@@ -5,11 +5,18 @@ $box-color: grey;
 $text-color: white;
 $body-color: lightgrey;
 $hover-color: #555;
+$button: blue;
+
+// Mixin to calculate box size
+@mixin calculate-box-size($base-size, $multiplier) {
+    width: $base-size * $multiplier;
+    height: $base-size * $multiplier;
+}
 
 @import "@fortawesome/fontawesome-free/css/all.css";
 
+
 html{
-    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
@@ -21,6 +28,8 @@ body{
 nav {
     display: flex;
     background: $background-color;
+    justify-content: right; 
+    align-items: right; 
 }
 
 nav > ul {
@@ -28,7 +37,7 @@ nav > ul {
 }
 
 nav > ul > li {
-    margin-left: 1rem;
+    margin-right: 1rem;
     list-style-type: none;
 }
 
@@ -42,7 +51,13 @@ nav a:hover {
     background-color: $hover-color;
 }
 
-
+.text{
+    text-align: center;
+    background-color: $box-color;
+    padding: 20px;
+    z-index: -1;
+    box-shadow: 1px 1px 3px
+}
 
 .top-box{
     background: $background-color;
@@ -51,16 +66,32 @@ nav a:hover {
     text-align: center;
 }
 
+
+
 .container1{
     display: flex;
     padding: 50px;
-    
+    justify-content: center; 
+    align-items: center; 
 }
 
 .Box1, .Box2, .Box3{
+    @include calculate-box-size(175px, 2);
     background-color: $box-color;
     margin: 5px;
     padding: 100px;
+}
+
+button{
+    background-color: $button;
+    color: $text-color;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: $hover-color;
 }
 
 .container2{
@@ -95,4 +126,17 @@ img{
     padding: 10px;
 }
 
+footer{
+    list-style-type: none;
+    display: flex;
+    background: white;
+    justify-content: center; 
+    align-items: center; 
+    padding: 100px;
+}
 
+.container5, .container6, .container7{
+    @include calculate-box-size(100px, 2);
+    margin: 5px;
+    padding: 100px;
+}
